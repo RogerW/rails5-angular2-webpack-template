@@ -1,0 +1,15 @@
+md-card
+  h2  My Heroes 
+  .add__hero
+    md-input(#heroName='', placeholder='Hero name') 
+    button((click)="add(heroName.value); heroName.value=''", md-raised-button='', color='accent') Add
+  md-list.app-list
+    md-list-item(*ngFor='let hero of heroes',
+        [class.selected]='hero === selectedHero',
+        (click)='onSelect(hero)')
+      h3(md-line='') {{hero.id}}
+      p.demo-secondary-text(md-line='') {{hero.name}}
+      button((click)="delete(hero); $event.stopPropagation()", md-raised-button='', color='warn') x
+md-card(*ngIf="selectedHero")
+  h2 {{selectedHero.name | uppercase}} is my hero
+  button( (click)="gotoDetail()", md-raised-button='', color='primaty' ) View Details

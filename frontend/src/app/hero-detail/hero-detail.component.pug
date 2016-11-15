@@ -1,0 +1,9 @@
+md-card.app-input-section(*ngIf='hero')
+  h2 {{hero.name}} details!
+  div
+    label id: 
+    | {{hero.id}}
+  md-input([(ngModel)]='hero.name', placeholder='name')
+  br
+  button( (click)="goBack()", md-raised-button='', color="primary" ) Back
+  button( (click)="save()", md-raised-button='', color="warn" ) Save
