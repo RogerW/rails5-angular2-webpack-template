@@ -1,7 +1,6 @@
 empty_directory "frontend"
 directory "frontend/config"
 directory "frontend/dist"
-directory "frontend/etc"
 directory "frontend/src"
 
 copy_file "frontend/.travis.yml"
