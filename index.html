@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Rails5-angular2-webpack-template : Rails 5 and Angular 2 template with webpack">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Rails5-angular2-webpack-template</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/RogerW/rails5-angular2-webpack-template">View on GitHub</a>
+
+          <h1 id="project_title">Rails5-angular2-webpack-template</h1>
+          <h2 id="project_tagline">Rails 5 and Angular 2 template with webpack</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/RogerW/rails5-angular2-webpack-template/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/RogerW/rails5-angular2-webpack-template/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="rogerwrails5-angular2-webpack-template" class="anchor" href="#rogerwrails5-angular2-webpack-template" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>RogerW/rails5-angular2-webpack-template</h1>
+
+<h2>
+<a id="Описание" class="anchor" href="#%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Описание</h2>
+
+<p>Это шаблон приложения <strong>Rails 5</strong> и <strong>Angular 2</strong>
+Основано на <a href="https://github.com/mattbrictson/rails-template">mattbrictson/rails-template</a> и 
+<a href="https://github.com/AngularClass/angular2-webpack-starter">AngularClass/angular2-webpack-starter</a>.</p>
+
+<h2>
+<a id="Требования" class="anchor" href="#%D0%A2%D1%80%D0%B5%D0%B1%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Требования</h2>
+
+<ul>
+<li>Rails 5.0.0</li>
+<li>PostgreSQL, в продакшене</li>
+</ul>
+
+<h1>
+<a id="Установка" class="anchor" href="#%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Установка</h1>
+
+<p><em>По желанию.</em></p>
+
+<p>Для того, что бы сделать этот шаблон использовался при создании приложений по-умолчанию, создайте файл <code>~/.railsrc</code> со следующим содержимым:</p>
+
+<pre><code>-m https://raw.githubusercontent.com/RogerW/rails5-angular2-webpack-template/master/template.rb --api
+</code></pre>
+
+<p>Далее выполняем команду:</p>
+
+<pre><code>rails new blog \
+  -m https://raw.githubusercontent.com/RogerW/rails5-angular2-webpack-template/master/template.rb --api
+
+rails new blog (если вы создали ~/.railsr, то выполняем эту команду)
+</code></pre>
+
+<h2>
+<a id="Запуск" class="anchor" href="#%D0%97%D0%B0%D0%BF%D1%83%D1%81%D0%BA" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Запуск</h2>
+
+<p>Для запуска приложения выполните:</p>
+
+<pre><code>foreman start
+</code></pre>
+
+<h2>
+<a id="Какие-задачи-выполняет-этот-шаблон" class="anchor" href="#%D0%9A%D0%B0%D0%BA%D0%B8%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B8-%D0%B2%D1%8B%D0%BF%D0%BE%D0%BB%D0%BD%D1%8F%D0%B5%D1%82-%D1%8D%D1%82%D0%BE%D1%82-%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Какие задачи выполняет этот шаблон?</h2>
+
+<p>Шаги выполнения:</p>
+
+<ol>
+<li>Генерирование файлов и каталогов приложения</li>
+<li>Проверка наличия установленног Bundler</li>
+<li>Создает базы для рабочего и тестового окружения</li>
+<li>Создает репозиторий git</li>
+<li>Отправляет код в удаленный репозиторий, который вы укажите.</li>
+</ol>
+
+<h2>
+<a id="Что-вкючено" class="anchor" href="#%D0%A7%D1%82%D0%BE-%D0%B2%D0%BA%D1%8E%D1%87%D0%B5%D0%BD%D0%BE" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Что вкючено?</h2>
+
+<h4>
+<a id="Список-gem" class="anchor" href="#%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA-gem" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Список GEM</h4>
+
+<ul>
+<li>Ядро
+
+<ul>
+<li>
+<a href="https://github.com/makandra/active_type">active_type</a> – for building simple and effective form/service objects</li>
+<li>
+<a href="http://sidekiq.org">sidekiq</a> – Redis-based job queue implementation for Active Job</li>
+</ul>
+</li>
+<li>Настройка
+
+<ul>
+<li>
+<a href="https://github.com/bkeepers/dotenv">dotenv</a> – in place of the Rails <code>secrets.yml</code>
+</li>
+</ul>
+</li>
+<li>Иструменты
+
+<ul>
+<li>
+<a href="https://github.com/ctran/annotate_models">annotate</a> – auto-generates schema documentation</li>
+<li>
+<a href="https://github.com/ai/autoprefixer-rails">autoprefixer-rails</a> – automates cross-browser CSS compatibility</li>
+<li>
+<a href="https://github.com/michaeldv/awesome_print">awesome_print</a> – try <code>ap</code> instead of <code>puts</code>
+</li>
+<li>
+<a href="https://github.com/charliesome/better_errors">better_errors</a> – useful error pages with interactive stack traces</li>
+<li>
+<a href="https://github.com/guard/guard">guard</a> – runs tests as you develop; mandatory for effective TDD</li>
+<li>
+<a href="https://github.com/guard/guard-livereload">livereload</a> – magically refreshes browsers whenever you save a file</li>
+<li>
+<a href="https://github.com/bbatsov/rubocop">rubocop</a> – enforces Ruby code style</li>
+<li>
+<a href="https://github.com/brentd/xray-rails">xray-rails</a> – inspect view partials in the browser</li>
+</ul>
+</li>
+<li>Разворачивание
+
+<ul>
+<li>
+<a href="https://github.com/mattbrictson/capistrano-mb">capistrano-mb</a> – capistrano recipes</li>
+<li>
+<a href="http://unicorn.bogomips.org">unicorn</a> – the industry-standard Rails server</li>
+<li>
+<a href="https://github.com/kzk/unicorn-worker-killer">unicorn-worker-killer</a> – to manage memory use</li>
+</ul>
+</li>
+<li>Безопасность
+
+<ul>
+<li>
+<a href="https://github.com/presidentbeef/brakeman">brakeman</a> and <a href="https://github.com/rubysec/bundler-audit">bundler-audit</a> – detect security vulnerabilities</li>
+<li>
+<a href="https://github.com/twitter/secureheaders">secure_headers</a> – hardens your app against XSS attacks</li>
+</ul>
+</li>
+<li>Тесты
+
+<ul>
+<li>
+<a href="https://github.com/jnicklas/capybara">capybara</a> and <a href="https://github.com/teampoltergeist/poltergeist">poltergeist</a> – integration testing</li>
+<li>
+<a href="https://github.com/kern/minitest-reporters">minitest-reporters</a> – colorizes test output with progress bar and more</li>
+<li>
+<a href="https://github.com/freerange/mocha">mocha</a> – excellent mocking for Test::Unit/Minitest</li>
+<li>
+<a href="https://github.com/colszowka/simplecov">simplecov</a> – code coverage reports</li>
+<li>
+<a href="https://github.com/thoughtbot/shoulda">shoulda</a> – shortcuts for common ActiveRecord tests</li>
+<li>
+<a href="https://github.com/grosser/test_after_commit">test_after_commit</a> – ensures after_commit hooks can be tested</li>
+</ul>
+</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Rails5-angular2-webpack-template maintained by <a href="https://github.com/RogerW">RogerW</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
