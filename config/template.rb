@@ -23,7 +23,7 @@ copy_file "config/initializers/rotate_log.rb"
 copy_file "config/initializers/secret_token.rb"
 copy_file "config/initializers/secure_headers.rb"
 copy_file "config/initializers/version.rb"
-copy_file "config/initializers/cors.rb"
+copy_file "config/initializers/cors.rb", :force => true
 template "config/initializers/sidekiq.rb.tt"
 
 gsub_file "config/initializers/filter_parameter_logging.rb", /\[:password\]/ do
