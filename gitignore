@@ -22,6 +22,4 @@
 # Added by webpack-rails
 /node_modules
 /public/webpack
-/.c9
 /frontend/node_modules/*
-/Gemfile.lock

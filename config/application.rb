@@ -1,30 +1,17 @@
-require_relative 'boot'
+gsub_file "config/application.rb",
+          "# config.time_zone = 'Central Time (US & Canada)'",
+          'config.time_zone = "Europe/Moscow"'
 
-require "rails"
-# Pick the frameworks you want:
-require "active_model/railtie"
-require "active_job/railtie"
-require "active_record/railtie"
-require "action_controller/railtie"
-require "action_mailer/railtie"
-require "action_view/railtie"
-require "action_cable/engine"
-# require "sprockets/railtie"
-require "rails/test_unit/railtie"
+insert_into_file "config/application.rb", :before => /^  end/ do
+  <<-'RUBY'
 
-# Require the gems listed in Gemfile, including any gems
-# you've limited to :test, :development, or :production.
-Bundler.require(*Rails.groups)
+    # Bootscale needs this to prevent stale cache
+    initializer :regenerate_require_cache, :before => :load_environment_config do
+      Bootscale.regenerate
+    end
 
-module WebpackRails
-  class Application < Rails::Application
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
-
-    # Only loads a smaller set of middleware suitable for API only apps.
-    # Middleware like session, flash, cookies can be added back manually.
-    # Skip views, helpers and assets when generating a new resource.
-    config.api_only = true
-  end
+    # Ensure non-standard paths are eager-loaded in production
+    # (these paths are also autoloaded in development mode)
+    # config.eager_load_paths += %W(#{config.root}/lib)
+  RUBY
 end
