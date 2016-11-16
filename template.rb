@@ -23,7 +23,7 @@ def apply_template!
   copy_file "Guardfile"
   copy_file "config.ru"
   copy_file "Procfile"
-
+            
   apply "app/template.rb"
   apply "bin/template.rb"
   apply "config/template.rb"
@@ -70,7 +70,7 @@ def add_template_repository_to_source_path
     at_exit { FileUtils.remove_entry(tempdir) }
     git :clone => [
       "--quiet",
-      "https://github.com/mattbrictson/rails-template.git",
+      "https://github.com/RogerW/rails5-angular2-webpack-template.git",
       tempdir
     ].map(&:shellescape).join(" ")
   else

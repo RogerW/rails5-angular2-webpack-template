@@ -18,14 +18,14 @@
 Для того, что бы сделать этот шаблон использовался при создании приложений по-умолчанию, создайте файл `~/.railsrc` со следующим содержимым:
 
 ```
--m https://raw.githubusercontent.com/RogerW/rails5-angular2-webpack-template/master/template.rb
+-m https://raw.githubusercontent.com/RogerW/rails5-angular2-webpack-template/master/template.rb --api
 ```
 
 Далее выполняем команду:
 
 ```
 rails new blog \
-  -m https://raw.githubusercontent.com/mattbrictson/rails-template/master/template.rb
+  -m https://raw.githubusercontent.com/RogerW/rails5-angular2-webpack-template/master/template.rb --api
   
 rails new blog (если вы создали ~/.railsr, то выполняем эту команду)
 ```
