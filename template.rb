@@ -21,7 +21,7 @@ def apply_template!
 
   copy_file "Capfile"
   copy_file "Guardfile"
-  copy_file "config.ru"
+  copy_file "config.ru", :force => true
   copy_file "Procfile"
             
   apply "app/template.rb"
