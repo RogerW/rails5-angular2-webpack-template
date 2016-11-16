@@ -46,6 +46,8 @@ def apply_template!
 
   template "rubocop.yml.tt", ".rubocop.yml"
   run_rubocop_autocorrections
+  
+  run "npm --prefix=frontend install"
 
   unless preexisting_git_repo?
     git :add => "-A ."
